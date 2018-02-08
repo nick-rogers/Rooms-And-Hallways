@@ -1,34 +1,51 @@
 $(document).ready(function(){
 
-	/*var howMany = Math.round(Math.random()*10);
-
-	for(var i = 0; i < 10; i++){
-		console.log('count ' + i);
-		var randomizedTop = Math.round(Math.random()*350);
-		var randomizedLeft = Math.round(Math.random()*350);
-
-		var flip1 = Math.random();
-		if(flip1 > 0.5){
-			randomizedTop = randomizedTop;
+	$('.link').mouseover(function(){
+		var dest = $(this).attr('href');
+		if(dest == 'index.html'){
+			$('.sub-head').text('Writing');
 		}
 		else {
-			randomizedTop = -1 * randomizedTop;
+			if(dest.charAt(0) == 'e'){
+			if(dest.charAt(1) == '1'){
+				$('.sub-head').text('15000 BC');
+			}
+			else if(dest.charAt(1) == '2'){
+				$('.sub-head').text('1800 BC');
+			}
+			else if(dest.charAt(1) == '3'){
+				$('.sub-head').text('900 AD');
+			}
+			else if(dest.charAt(1) == '4'){
+				$('.sub-head').text('1750 AD');
+			}
+			else if(dest.charAt(1) == '5'){
+				$('.sub-head').text('1880 AD');
+			}
+			else {
+				$('.sub-head').text('1920 AD');
+			}
 		}
-
-		var flip2 = Math.random();
-		if(flip2 > 0.5){
-			randomizedLeft = randomizedLeft;
+		else if (dest.charAt(0) == 'a'){
+			if(dest.charAt(1) == '2'){
+				$('.sub-head').text('Cooking');
+			}
+			else if(dest.charAt(1) == '3'){
+				$('.sub-head').text('War');
+			}
+			else if(dest.charAt(1) == '4'){
+				$('.sub-head').text('Music');
+			}
+			else if(dest.charAt(1) == '5'){
+				$('.sub-head').text('Eating');
+			}
+			else {
+				$('.sub-head').text('Building');
+			}
 		}
-		else {
-			randomizedLeft = -1 * randomizedLeft;
 		}
-
-		var div = document.createElement("div");
-		div.style.width = "200px";
-		div.style.height = "110px";
-		div.style.background = "white";
-		div.style.marginLeft = randomizedLeft+"px";
-		div.style.marginTop = randomizedTop+"px";
-		document.getElementById("theBody").appendChild(div);
-	}*/
+		
+	}).mouseout(function(){
+		$('.sub-head').text('');
+	});
 });
